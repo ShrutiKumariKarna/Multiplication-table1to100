@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, #DAE2F8, #D6A4A4);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:30px;
+}
+
+.title{
+    width:auto;
+    height:30px;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top:20px;
+    text-transform: capitalize;
+    font-weight:600;
+    font-size: 27px;
+}
+
+
+.title input{
+    padding:4px;  
+    background: transparent;  
+    outline:none;
+    border:1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.resultbox{
+    border: 2px solid rgb(122, 122, 237);
+    height:auto;
+    width:200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    padding:10px 30px 10px 8px;
+    border-radius:5px;
+    overflow:hidden;
+    box-shadow: 2px 3px 12px grey;
+    margin-top: 20px;
+}
+
+.resultbox .num,
+.resultbox .cross,
+.resultbox .iteration,
+.resultbox .equalsto,
+.resultbox .result {
+    height:auto;
+    width:30px;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+.num{
+    color:rgb(122, 122, 237);
+    font-size: 25px;
+    text-align: right;
+    
+}
+
+.cross{
+    font-size: 15px;
+    text-align: center;
+}
+
+.iteration{
+    color:rgb(231, 164, 39);
+    font-size: 25px;
+    text-align: left;
+}
+
+.equalsto{
+    font-size: 25px;
+}
+
+.result{
+    text-align: left;
+    font-size: 25px;
+    
+}
+
+#btn {
+    border: 1px solid grey;
+    height:30px;
+    width:60px;
+    margin:-10px;
+    background:transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    font-variant: small-caps;
+}
+
+#btn:hover{
+    width:100px;
+    background-color: rgb(122, 122, 237);
+    transition: background-color 0.7s ease-out;
+    transition: width 0.7s ease;
+}
+
+
+/* Default styles */
+.resultbox {
+    margin-top: 20px;
+}
+.title input{
+    margin-top:10px;
+}
+.title{
+    font-size:27px;
+}
+/* screen size less than 500px; */
+@media (max-width: 500px ) {
+    .resultbox{
+        margin-top: 25px;
+    }
+    .title input{
+        margin-top:15px;
+    }
+    .title {
+        font-size: 24px;
+    }
+}
